@@ -5,6 +5,7 @@
 # seed  - starting seed value
 generateY <- function(X, beta, sigma, seed = 5832652){
   #[ToDo] Set seed and generate Y following linear model
+  set.seed(seed)
   epshilon = rnorm(nrow(X), mean = 0, sd = sigma)# generated random no.s from N(0,1).
   Y = X%*%beta + epshilon # generated Y according to specified linear regreesion model.
   # Return Y
